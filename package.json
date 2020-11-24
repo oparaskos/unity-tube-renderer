@@ -1,0 +1,12 @@
+{
+  "name": "com.github.oparaskos.unity.tube.renderer",
+  "displayName": "Unity Tube Renderer",
+  "description": "Draw a list of Vector3s as a rope, pipe or tube.",
+  "unity": "2020.1",
+  "unityRelease": "0f1",
+  "licenseSpdxId": "MIT",
+  "licenseName": "MIT License",
+  "repoUrl": "https://github.com/oparaskos/unity-tube-renderer",
+  "version": "0.1.0",
+  "type": "library"
+}
