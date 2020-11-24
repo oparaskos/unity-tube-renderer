@@ -1,3 +1,5 @@
+[![openupm](https://img.shields.io/npm/v/com.github.oparaskos.unity.tube.renderer?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.github.oparaskos.unity.tube.renderer/)
+
 # Unity Tube Renderer
 3D version of unity LineRenderer
 
@@ -27,11 +29,3 @@ in the "dependencies" section add:
 ```
 
 Find more information about this [here](https://docs.unity3d.com/Manual/upm-git.html).
-
-
-## TODO: 
-* Allow End caps (capping with circles + allow prefabs to be placed at start and end)
-* Start/End width to Thickness as a curve
-* Allow editing via controlpoints in editor
-* Automated LOD.
-* Smoothing for interpolated points

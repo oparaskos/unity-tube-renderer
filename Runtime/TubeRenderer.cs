@@ -51,8 +51,8 @@ namespace Unity.TubeRenderer
         private void Awake()
         {
             meshFilter = GetComponent<MeshFilter>();
-            mesh = CreateMesh();
-            meshFilter.mesh = mesh;
+            if (mesh == null) mesh = new Mesh();
+            meshFilter.mesh = CreateMesh();
             lastUpdate = PropHashCode();
         }
 
@@ -113,14 +113,12 @@ namespace Unity.TubeRenderer
                     }
                 }
             }
-
-            Mesh m = new Mesh();
-            m.vertices = verts;
-            m.uv = uvs;
-            m.normals = normals;
-            m.SetTriangles(tris, 0);
-            m.RecalculateBounds();
-            return m;
+            mesh.vertices = verts;
+            mesh.uv = uvs;
+            mesh.normals = normals;
+            mesh.SetTriangles(tris, 0);
+            mesh.RecalculateBounds();
+            return mesh;
         }
 
         private Vector3 GetVertexFwd(Vector3[] positions, int i)
@@ -168,8 +166,7 @@ namespace Unity.TubeRenderer
         {
             if (lastUpdate != PropHashCode())
             {
-                mesh = CreateMesh();
-                meshFilter.mesh = mesh;
+                meshFilter.mesh = CreateMesh();
             }
         }
     }
