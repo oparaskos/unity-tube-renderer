@@ -59,6 +59,8 @@ namespace Unity.TubeRenderer
 
         private Mesh CreateMesh()
         {
+            if (positions != null && positions.Length == 0) return null;
+
             Vector3[] interpolatedPositions = Enumerable.Range(0, (positions.Length - 1) * subdivisions)
                 .Select(i => ((float)i) / ((float)subdivisions))
                 .Select(f => GetPosition(f))
@@ -113,6 +115,7 @@ namespace Unity.TubeRenderer
                     }
                 }
             }
+            mesh.Clear();
             mesh.vertices = verts;
             mesh.uv = uvs;
             mesh.normals = normals;
